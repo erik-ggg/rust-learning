@@ -29,7 +29,6 @@ fn main() {
                 let mut aux = create_queue_arc.lock().unwrap();
                 aux[i].push('x');
             }
-            // thread::sleep(Duration::from_secs(3));
             let mut rng = rand::thread_rng();
             thread::sleep(Duration::from_secs(rng.gen_range(1..5)));
         });
